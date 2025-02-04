@@ -1,41 +1,61 @@
-sudo nano /etc/systemd/system/auto-update.service
+# Welcome to TheKingZiga's GitHub Repository
 
-[Unit]
-Description=Auto Update Service
-Wants=network-online.target
-After=network-online.target
+![Welcome Banner](https://your-image-url.com/banner.png)
 
-[Service]
-Type=oneshot
-ExecStart=/bin/bash /path/to/your/script.sh
+## 🚀 About Me
+Hi, I'm **Žiga Vodnjov Frelih**, aka **TheKingZiga**! 👑 I'm passionate about **homelabs, self-hosting, networking, automation, and open-source technologies**. This repository hosts various projects, scripts, and configurations related to my tech explorations.
 
-[Install]
-WantedBy=multi-user.target
+## 🔥 Features
+- **Proxmox & TrueNAS Setup** ⚙️
+- **Docker & Kubernetes Deployments** 🐳
+- **Cloudflare & HAProxy Configurations** 🌐
+- **Minecraft Server Management** 🎮
+- **Firewall & Security Enhancements** 🔒
+- **Self-Hosted Applications** 🏠
 
-sudo systemctl enable auto-update.service
-sudo systemctl start auto-update.service
+## 📂 Repository Structure
+```
+📦 repository-name
+ ┣ 📂 docs         # Documentation & guides
+ ┣ 📂 scripts      # Useful automation scripts
+ ┣ 📂 config       # Configuration files & templates
+ ┣ 📜 README.md    # This file
+ ┣ 📜 LICENSE      # License information
+ ┗ 📜 .gitignore   # Ignored files & directories
+```
 
-sudo systemctl disable auto-update.service
+## 🚀 Getting Started
+To get started with any of the projects, follow the installation instructions in the respective project folder.
 
------------------------------------------------------------
-sudo nano /etc/systemd/system/auto-update.timer
+### Prerequisites
+- Linux (Ubuntu/Debian recommended)
+- Docker & Docker Compose
+- Git
+- Cloudflare API (for DNS configurations)
 
-[Unit]
-Description=Run Auto Update Service every 3 days
+### Installation
+Clone the repository and navigate to the desired project:
+```bash
+sudo git clone https://github.com/TheKingZiga/your-repository.git
+cd your-repository
+```
 
-[Timer]
-OnBootSec=0
-OnCalendar=*-*-* 0/3:00:00
-Persistent=true
-Unit=auto-update.service
+## 🤝 Contributing
+Contributions, issues, and feature requests are welcome!
+- Fork the repo
+- Create a new branch (`feature/your-feature`)
+- Commit your changes
+- Push to your branch
+- Open a Pull Request
 
-[Install]
-WantedBy=timers.target
+## 🌐 Connect With Me
+[![Website](https://img.shields.io/badge/Website-TheKingZiga.com-blue)](https://www.thekingziga.com)
+[![Twitter](https://img.shields.io/badge/Twitter-@TheKingZiga-1DA1F2)](https://twitter.com/TheKingZiga)
+[![GitHub](https://img.shields.io/badge/GitHub-TheKingZiga-181717)](https://github.com/TheKingZiga)
 
-sudo systemctl enable auto-update.timer
-sudo systemctl start auto-update.timer
+## 📜 License
+This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.
 
+---
+✨ _Happy Homelabbing!_ ✨
 
-sudo chmod 600 email_credentials.conf    sudo chown root:root /root/.msmtprc        sudo chmod +x auto_update.sh
-
-sudo apt install msmtp
