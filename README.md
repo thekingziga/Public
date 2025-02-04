@@ -1,6 +1,6 @@
 # Welcome to TheKingZiga's GitHub Repository
 
-![Welcome Banner](https://your-image-url.com/banner.png)
+![Welcome Banner](https://i.imgur.com/OzdJrv7.jpg)
 
 ## 🚀 About Me
 Hi, I'm **Žiga Vodnjov Frelih**, aka **TheKingZiga**! 👑 I'm passionate about **homelabs, self-hosting, networking, automation, and open-source technologies**. This repository hosts various projects, scripts, and configurations related to my tech explorations.
